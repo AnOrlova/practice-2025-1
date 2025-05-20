@@ -258,3 +258,19 @@ header {
   transform: translateY(0);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
+
+/* Для участников */
+.participants-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.participant {
+  padding: 1rem;
+  background-color: var(--secondary-bg);
+  border-radius: 8px;
+  text-align: center;
+  transition: var(--transition);
+}
