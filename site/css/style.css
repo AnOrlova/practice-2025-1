@@ -274,3 +274,54 @@ header {
   text-align: center;
   transition: var(--transition);
 }
+
+/* Для ссылки на компанию-заказчика */
+.centered-company {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    text-align: center;
+}
+
+.company-heading {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.company-name {
+    font-family: 'Rubik Mono One', sans-serif;
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    position: relative;
+}
+
+.company-name::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: width 0.3s ease;
+}
+
+.company-name:hover::after {
+    width: 100%;
+}
+
+.nav-links a.current-page {
+    color: var(--accent-color);
+    font-weight: 700;
+}
+
+.nav-links a.current-page::after {
+    display: none;
+}
